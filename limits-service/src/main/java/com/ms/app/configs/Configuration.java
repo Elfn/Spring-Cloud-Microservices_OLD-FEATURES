@@ -1,16 +1,34 @@
 package com.ms.app.configs;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by Elimane on Oct, 2020, at 14:33
- */
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Component
 @ConfigurationProperties("limits-service")
-@Data
+@NoArgsConstructor
 public class Configuration {
-    private int minimum;
+
+	private int minimum;
     private int maximum;
+    
+    
+    
+	public int getMinimum() {
+		return minimum;
+	}
+	public void setMinimum(int minimum) {
+		this.minimum = minimum;
+	}
+	public int getMaximum() {
+		return maximum;
+	}
+	public void setMaximum(int maximum) {
+		this.maximum = maximum;
+	}
+    
+    
+	
 }
