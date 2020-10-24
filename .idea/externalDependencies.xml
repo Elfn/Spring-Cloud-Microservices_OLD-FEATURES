@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="Tomcat" max-version="8" />
+    <plugin id="com.intellij.struts2" min-version="2" />
+  </component>
+</project>
