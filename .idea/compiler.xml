@@ -8,18 +8,27 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="app" />
+        <module name="currency-exchange-service" />
+        <module name="currency-conversion-service" />
         <module name="app (1)" />
+        <module name="limits-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="app" target="11" />
       <module name="app (1)" target="11" />
+      <module name="currency-conversion-service" target="11" />
+      <module name="currency-exchange-service" target="11" />
+      <module name="limits-service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="app" options="-parameters" />
       <module name="app (1)" options="-parameters" />
+      <module name="currency-conversion-service" options="-parameters" />
+      <module name="currency-exchange-service" options="-parameters" />
+      <module name="limits-service" options="-parameters" />
     </option>
   </component>
 </project>

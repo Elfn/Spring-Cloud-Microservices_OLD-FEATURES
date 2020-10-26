@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/SPRING-MICROSERVICES.iml" filepath="$PROJECT_DIR$/.idea/SPRING-MICROSERVICES.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/app.iml" filepath="$PROJECT_DIR$/config-server/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/limits-service/app (1).iml" filepath="$PROJECT_DIR$/limits-service/app (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" filepath="$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" filepath="$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/limits-service/limits-service.iml" filepath="$PROJECT_DIR$/limits-service/limits-service.iml" />
     </modules>
   </component>
 </project>
