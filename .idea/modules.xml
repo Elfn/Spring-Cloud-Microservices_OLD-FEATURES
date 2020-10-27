@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" filepath="$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-discovery-server/eureka-discovery-server.iml" filepath="$PROJECT_DIR$/eureka-discovery-server/eureka-discovery-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/limits-service/limits-service.iml" filepath="$PROJECT_DIR$/limits-service/limits-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-api-gateway-server/zuul-api-gateway-server.iml" filepath="$PROJECT_DIR$/zuul-api-gateway-server/zuul-api-gateway-server.iml" />
     </modules>
   </component>
 </project>

@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * Created by Elimane on Oct, 2020, at 23:58
  */
+//That proxy is an intermediary system to call currency exchange MS APIs
+//We are using ribbon load balancer to distribute requests from proxy to all available currency-exchange-service's instances
+//We are using FEIGN to be able to remotly consume  currency-exchange-service's API's
 //@FeignClient(name = "currency-exchange-service", url = "localhost:8002") To talk to only one instance
 @FeignClient(name = "currency-exchange-service") //To talk to multiple instances
 @RibbonClient(name = "currency-exchange-service")

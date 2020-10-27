@@ -34,6 +34,7 @@
         <option value="$PROJECT_DIR$/currency-exchange-service/pom.xml" />
         <option value="$PROJECT_DIR$/currency-conversion-service/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-discovery-server/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-api-gateway-server/pom.xml" />
       </list>
     </option>
   </component>
