@@ -12,6 +12,7 @@
         <module name="currency-conversion-service" />
         <module name="app (1)" />
         <module name="limits-service" />
+        <module name="eureka-discovery-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -19,6 +20,7 @@
       <module name="app (1)" target="11" />
       <module name="currency-conversion-service" target="11" />
       <module name="currency-exchange-service" target="11" />
+      <module name="eureka-discovery-server" target="11" />
       <module name="limits-service" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -28,6 +30,7 @@
       <module name="app (1)" options="-parameters" />
       <module name="currency-conversion-service" options="-parameters" />
       <module name="currency-exchange-service" options="-parameters" />
+      <module name="eureka-discovery-server" options="-parameters" />
       <module name="limits-service" options="-parameters" />
     </option>
   </component>
