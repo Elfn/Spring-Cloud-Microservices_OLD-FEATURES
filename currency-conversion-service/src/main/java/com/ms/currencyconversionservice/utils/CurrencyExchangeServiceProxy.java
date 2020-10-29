@@ -13,11 +13,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 //We are using ribbon load balancer to distribute requests from proxy to all available currency-exchange-service's instances
 //We are using FEIGN to be able to remotly consume  currency-exchange-service's API's
 //@FeignClient(name = "currency-exchange-service", url = "localhost:8002") To talk to only one instance
-@FeignClient(name = "currency-exchange-service") //To talk to multiple instances
+//@FeignClient(name = "currency-exchange-service") //To talk to multiple instances
+@FeignClient(name = "zuul-api-gateway-server") //Make request go through zuul API
 @RibbonClient(name = "currency-exchange-service")
 public interface CurrencyExchangeServiceProxy {
 
-    @GetMapping("/currency-exchange/from/{from}/to/{to}")
+    @GetMapping("/currency-exchange-service/currency-exchange/from/{from}/to/{to}")
     public CurrencyConversionBean retrieveExchangeValue(@PathVariable("from") String from, @PathVariable("to") String to);
 
 }

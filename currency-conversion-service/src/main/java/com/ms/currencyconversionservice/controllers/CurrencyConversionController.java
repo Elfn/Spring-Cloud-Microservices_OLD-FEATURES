@@ -2,6 +2,8 @@ package com.ms.currencyconversionservice.controllers;
 
 import com.ms.currencyconversionservice.entities.CurrencyConversionBean;
 import com.ms.currencyconversionservice.utils.CurrencyExchangeServiceProxy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +24,8 @@ public class CurrencyConversionController {
 
     @Autowired
     private CurrencyExchangeServiceProxy exchangeServiceProxy;
+
+   private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     //RESTTEMPLATE COMMUNICATION
     @GetMapping("/currency-converter/from/{from}/to/{to}/quantity/{quantity}")
@@ -46,6 +50,8 @@ public class CurrencyConversionController {
     {
 
         CurrencyConversionBean response = exchangeServiceProxy.retrieveExchangeValue(from,to);
+
+        logger.info("{}",response);
 
         return new CurrencyConversionBean(response.getId(), from, to, response.getConversionMultiple(),quantity,quantity.multiply(response.getConversionMultiple()),response.getPort());
     }

@@ -8,7 +8,7 @@ Feign => Used as mecanism to create restful clients
 
 -----------VISIBILITY AND MONITORING---------------------
 
-Zipkin => Used for distributed tracing
+Zipkin, Sleuth => Used for distributed tracing
 NETFLIX api gateway => Used as Architecture gateway
 
 -----------FAULT TOLERANCE---------------------
@@ -19,5 +19,12 @@ Hystrix => Used to configure default response if a service is down
 1 - Setting up Limit MS
 2 - Setting up config server
 3 - Setting up git local repository(To be linked with config server for centralize MS configs)
-4 - 
+4 - Setting up currency exchange service 
+5 - Setting up currency conversion service 
+6 - Setting up Eureka server
+
+Lauching order: eureka => config => exch => convers => zuul
+
+SLEUTH => Is a library that allows distributing tracing by 
+giving a unique ID to a request 
 

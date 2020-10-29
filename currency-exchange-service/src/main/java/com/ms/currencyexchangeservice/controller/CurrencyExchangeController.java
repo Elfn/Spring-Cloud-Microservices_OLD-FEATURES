@@ -21,7 +21,7 @@ import java.util.Objects;
 @Slf4j
 public class CurrencyExchangeController {
 
-    private static final Logger logger = LoggerFactory.getLogger(CurrencyExchangeController.class);
+    private Logger logger = LoggerFactory.getLogger(CurrencyExchangeController.class);
 
 
     @Autowired
@@ -38,7 +38,9 @@ public class CurrencyExchangeController {
 
         ExchangeValue exchangeValue = exchangeService.findByFromAndTo(from,to);
 
-        if(exchangeValue == null) logger.debug("Data not found!");
+//        if(exchangeValue == null) logger.debug("Data not found!");
+
+        logger.info("{}",exchangeValue);
 
         exchangeValue.setPort(Integer.parseInt(Objects.requireNonNull(env.getProperty("server.port"))));
 
