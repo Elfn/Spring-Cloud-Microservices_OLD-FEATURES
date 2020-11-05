@@ -23,8 +23,31 @@ Hystrix => Used to configure default response if a service is down
 5 - Setting up currency conversion service 
 6 - Setting up Eureka server
 
-Lauching order: eureka => config => exch => convers => zuul
+Spring cloud bus vs actuator => S Bus allows us to refresh all instances of all Microservices in our 
+archtecture, in contrat to Actuator which enable to refresh manually one Microservice at a time(One by one)
+
+Lauching order
+ 1-Eureka naming server(mvn spring-boot:run)
+ 2-Zipkin tracing distributed server(RABBIT_URI=amqp://localhost java -jar zipkin.jar)
+ 3-Currency conversion and exchange microservices(mvn spring-boot:run)
+ 4-Netflix zuul api-gateway server(mvn spring-boot:run)
 
 SLEUTH => Is a library that allows distributing tracing by 
 giving a unique ID to a request 
+
+https://zipkin.io/pages/quickstart
+
+Make Zipkin listen RABBITMQ To trace requests
+RABBIT_URI=amqp://localhost java -jar zipkin.jar
+
+//Eureka
+http://localhost:8761/
+
+//Launch rabbitMQ
+/usr/local/sbin/rabbitmq-server
+
+//APIS DOCUMENTATION
+https://documenter.getpostman.com/view/4346170/TVYPztnn#83d3037e-a8e6-4d42-a489-758f2efaf76e
+
+
 
