@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "89647b67-ec50-4ead-b133-ac155e35a890",
+		"name": "Microservices 28 minutes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Limits [GIT]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/limits-service/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"limits-service",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency exchange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8003/currency-exchange/from/USD/to/INR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"currency-exchange",
+						"from",
+						"USD",
+						"to",
+						"INR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Limits API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/limits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"limits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency conversion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/currency-converter/from/AUD/to/INR/quantity/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"currency-converter",
+						"from",
+						"AUD",
+						"to",
+						"INR",
+						"quantity",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency conversion - Feign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/currency-converter-feign/from/USD/to/INR/quantity/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"currency-converter-feign",
+						"from",
+						"USD",
+						"to",
+						"INR",
+						"quantity",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency conversion - Feign via Zuul",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/currency-conversion-service/currency-converter-feign/from/USD/to/INR/quantity/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"currency-conversion-service",
+						"currency-converter-feign",
+						"from",
+						"USD",
+						"to",
+						"INR",
+						"quantity",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency exchange via zuul",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/currency-exchange-service/currency-exchange/from/USD/to/INR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"currency-exchange-service",
+						"currency-exchange",
+						"from",
+						"USD",
+						"to",
+						"INR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency conversion via zuul",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/currency-conversion-service/currency-converter/from/AUD/to/INR/quantity/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"currency-conversion-service",
+						"currency-converter",
+						"from",
+						"AUD",
+						"to",
+						"INR",
+						"quantity",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/actuator/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"actuator",
+						"refresh"
+					]
+				},
+				"description": "To refresh MS instances one by one"
+			},
+			"response": []
+		},
+		{
+			"name": "Spring cloud bus _Actuator - Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/actuator/bus-refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"actuator",
+						"bus-refresh"
+					]
+				},
+				"description": "To refresh the configurations of all the MS of my application"
+			},
+			"response": []
+		},
+		{
+			"name": "Fault tolerance Hystrix",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/fault-tolerance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"fault-tolerance"
+					]
+				},
+				"description": "To test fault tolerance into my MS Architecture"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
