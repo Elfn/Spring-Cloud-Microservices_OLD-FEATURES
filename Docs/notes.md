@@ -11,7 +11,7 @@ Feign => Used as mecanism to create restful clients
 Zipkin => Used for distributed tracing  
 NETFLIX api gateway => Used as Architecture gateway  
 
------------FAULT TOLERANCE---------------------
+-----------FAULT TOLERANCE---------------------  
 Hystrix => Used to configure default response if a service is down  
 
 
